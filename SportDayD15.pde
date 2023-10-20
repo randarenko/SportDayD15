@@ -28,7 +28,6 @@ void setup() {
 }
 
 void draw() {
-  background(255);
   frog.update();
    background(150, 200, 255);
   display();
