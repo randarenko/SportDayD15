@@ -8,7 +8,8 @@ class Background {
     this.groundImgY = groundImgY;
   }
    void display() {
-    imageMode(CENTER);
+    imageMode(CORNER);
+    groundImg.resize(width, height/2);
     image(groundImg, groundImgX, groundImgY);
   }
 }

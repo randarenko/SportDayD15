@@ -22,24 +22,25 @@ void setup() {
     cloudsObjects[i] = new Clouds(cloudsImage);
   }
 
+  ground = new Background("Ground.png", width/width, height - (height/5));
+
   //tower1 = (imgName, towerImgX, towerImgY)
-  tower1 = new Tower("tower_pic.jpeg", (width/2) - 50, height-(height/3));
-  ground = new Background("Ground.png", width/2, height*1.23);
+  tower1 = new Tower("tower_pic.jpeg", (width/2) - 50, height - (height/5) - 200);
 }
 
 void draw() {
-  
-   background(150, 200, 255);
-  display();
+  background(150, 200, 255);
 
   for (int i = 0; i < totalClouds; i++) {
     cloudsObjects[i].move();
     cloudsObjects[i].display();
   }
+
   frog.update();
+  display();
 }
 
 void display() {
-  tower1.display();
   ground.display();
+  tower1.display();
 }

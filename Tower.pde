@@ -1,19 +1,19 @@
 class Tower {
   //tower
   PImage towerImg; //importing tower image
-  int towerImgX, towerImgY; //location of tower image
+  int towerImgX; 
+  float towerImgY; //location of tower image
   int sizeX, sizeY; //size of tower image
 
   //coins
-  int coinX, coinY, coinSize, coinDistance;
+  float coinX, coinY, coinSize, coinDistance, coinNumber;
   color coinCol;
-  int coinNumber; //(for-loop)
-  
+
   //translate coins
-  int translateX, translateY; 
+  int translateX, translateY;
 
   //constructor
-  Tower(String imgName, int towerImgX, int towerImgY) {
+  Tower(String imgName, int towerImgX, float towerImgY) {
     //tower
     this.towerImg = loadImage(imgName);
     this.towerImgX = towerImgX;
@@ -28,10 +28,12 @@ class Tower {
     coinDistance = towerImgX + sizeX;
     coinNumber = 6;
     coinCol = color(#FFD700);
-    
-    //translate 
+
+    //translate
     translateX = width/2;
-    translateY = towerImgY - (coinSize*coinNumber);
+    //translateY = towerImgY - (coinSize*coinNumber);
+        translateY = height - sizeY;
+
   }
 
   void display() {
