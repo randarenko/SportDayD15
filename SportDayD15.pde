@@ -58,9 +58,10 @@ void draw() {
     cloudsObjects[i].display();
   }
 
-  frog.update();
   display();
   p1.update();
+    frog.update();
+
 }
 
 void display() {
