@@ -7,6 +7,7 @@ class Tower {
   //coins
   int coinX, coinY, coinSize;
   color coinC;
+  int coinNumber; //(for-loop)
 
   //constructor
   Tower(String imgName, int towerImgX, int towerImgY) {
@@ -21,7 +22,8 @@ class Tower {
     coinX = towerImgX;
     coinY = towerImgY - coinSize;
     coinSize = 20;
-    coinC = #FFD700;
+    //coinNumber = (towerImg
+    coinC = color(#FFD700);
   }
 
   void display() {
@@ -30,13 +32,10 @@ class Tower {
     towerImg.resize(sizeX, sizeY);
     image(towerImg, towerImgX, towerImgY);
 
-    //coins
     ellipseMode(CORNER);
     fill(coinC);
     for (int x = coinX; x < coinX + sizeX; x = x + coinSize) {
-for(int y = coinY; y < coinY + sizeY; y = y - coinSize) {
       ellipse(x, coinY - coinSize, coinSize, coinSize);
-}
     }
   }
 }
