@@ -34,6 +34,7 @@ class Frog
     image(frog, 0, 0);
   }
 
+//move the frog
   void checkMovement()
   {
     if (keyPressed)
@@ -56,6 +57,8 @@ class Frog
       checkInversion();
     }
   }
+  
+  //checks which direction the frog is in and if in jump state
   void checkInversion()
   {
     if(direction)
