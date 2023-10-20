@@ -46,6 +46,7 @@ void setup() {
 
   //tower1 = (imgName, towerImgX, towerImgY)
   tower1 = new Tower("tower_pic.jpeg", (width/2) - 50, height - (height/5) - 200);
+  p1 = new Princess(1,450);
 }
 
 void draw() {
