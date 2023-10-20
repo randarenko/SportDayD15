@@ -30,7 +30,7 @@ class Princess
   }
   void spawn()
   {
-    boolean rand = boolean((int)random(100)%2);
+    boolean rand = boolean((int)(random(100)%2));
     if(rand)
     {
       direction = true;
@@ -40,6 +40,7 @@ class Princess
     {
       direction = false;
       princess = princessBase;
+      x=800;
     }
   }
   void display()
