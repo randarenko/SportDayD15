@@ -7,7 +7,7 @@ class Clouds {
   Clouds(PImage img) {
     image = img;
     x = random(width);
-    y = random(0, 100);
+    y = random(y, 50);
     speed = .5;
   }
 
