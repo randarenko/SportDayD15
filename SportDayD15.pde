@@ -61,9 +61,29 @@ void draw() {
   display();
   p1.update();
     frog.update();
+    checkCollision();
 
 }
 
+void checkCollision() {
+  float frogX = frog.x;
+  float frogY = frog.y;
+  float princessX = p1.x;
+  float princessY = p1.y;
+  float princessWidth = 40; 
+  float princessHeight = 76; 
+
+// Princess and frog collide, remove the princess
+  if (frogX + frog.frog.width / 2 > princessX - princessWidth / 2 &&
+      frogX - frog.frog.width / 2 < princessX + princessWidth / 2 &&
+      frogY + frog.frog.height / 2 > princessY - princessHeight / 2 &&
+      frogY - frog.frog.height / 2 < princessY + princessHeight / 2) {
+    
+    
+    //respawn princess
+    p1.spawn();
+  }
+}
 void display() {
   ground.display();
   tower1.display();
