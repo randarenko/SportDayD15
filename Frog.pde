@@ -34,6 +34,7 @@ class Frog
     image(frog, 0, 0);
   }
 
+//move the frog
   void checkMovement()
   {
     if (keyPressed)
@@ -56,6 +57,8 @@ class Frog
       checkInversion();
     }
   }
+  
+  //checks which direction the frog is in and if in jump state
   void checkInversion()
   {
     if(direction)
@@ -71,6 +74,7 @@ class Frog
         frog = frogJumpI;
     }
   }
+  //code from https://stackoverflow.com/questions/29334348/processing-mirror-image-over-x-axis by asternine
   PImage invert(PImage img)
   {
     PImage flipped = createImage(img.width, img.height, ARGB);
@@ -84,6 +88,7 @@ class Frog
 
     return flipped;
   }
+  //end of code from https://stackoverflow.com/questions/29334348/processing-mirror-image-over-x-axis by asternine
   void move(float directionMultiplier)
   {
     x += speed*directionMultiplier;
@@ -97,6 +102,10 @@ class Frog
       jumpSprite = false;
     }
     y = spawnY - (int)(10*yChange);
+    if(x<0)
+      x=0;
+    else if(x>800)
+      x = 800;
     println(x + "   " + y);
   }
 }
