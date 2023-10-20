@@ -5,9 +5,12 @@ class Tower {
   int sizeX, sizeY; //size of tower image
 
   //coins
-  int coinX, coinY, coinSize;
-  color coinC;
+  int coinX, coinY, coinSize, coinDistance;
+  color coinCol;
   int coinNumber; //(for-loop)
+  
+  //translate coins
+  int translateX, translateY; 
 
   //constructor
   Tower(String imgName, int towerImgX, int towerImgY) {
@@ -19,11 +22,16 @@ class Tower {
     sizeY = 200;
 
     //coins
+    coinSize = 20;
     coinX = towerImgX;
     coinY = towerImgY - coinSize;
-    coinSize = 20;
-    //coinNumber = (towerImg
-    coinC = color(#FFD700);
+    coinDistance = towerImgX + sizeX;
+    coinNumber = 6;
+    coinCol = color(#FFD700);
+    
+    //translate 
+    translateX = width/2;
+    translateY = towerImgY - (coinSize*coinNumber);
   }
 
   void display() {
@@ -32,10 +40,16 @@ class Tower {
     towerImg.resize(sizeX, sizeY);
     image(towerImg, towerImgX, towerImgY);
 
+    //coin pyramid
     ellipseMode(CORNER);
-    fill(coinC);
-    for (int x = coinX; x < coinX + sizeX; x = x + coinSize) {
-      ellipse(x, coinY - coinSize, coinSize, coinSize);
+    fill(coinCol);
+    pushMatrix();
+    translate(translateX, translateY);
+    for (int y = 0; y < coinNumber; y++) {
+      for (int x = 0; x < y; x++) {
+        ellipse(x*coinSize-coinSize*0.5*y, y*coinSize, coinSize, coinSize);
+      }
     }
+    popMatrix();
   }
 }
