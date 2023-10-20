@@ -7,7 +7,7 @@ int totalClouds = 6;
 
 void setup() {
   size(800, 600);
-
+  frog = new Frog(5, 550);
   //cloud generation
   clouds = new PImage[2];
   cloudsObjects = new Clouds[totalClouds];
@@ -28,7 +28,7 @@ void setup() {
 }
 
 void draw() {
-  frog.update();
+  
    background(150, 200, 255);
   display();
 
@@ -36,6 +36,7 @@ void draw() {
     cloudsObjects[i].move();
     cloudsObjects[i].display();
   }
+  frog.update();
 }
 
 void display() {
