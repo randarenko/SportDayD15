@@ -2,14 +2,14 @@ Tower tower1;
 Frog frog;
 PImage[] clouds;
 Clouds[] cloudsObjects;
-int totalClouds = 6;
+int totalClouds = 5;
 
 
 void setup() {
   size(800, 600);
   frog = new Frog(5, 550);
   //cloud generation
-  clouds = new PImage[2];
+  clouds = new PImage[5];
   cloudsObjects = new Clouds[totalClouds];
 
   for (int i = 0; i < clouds.length; i++) {
