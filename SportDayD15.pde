@@ -4,6 +4,7 @@ Frog frog;
 PImage[] clouds;
 Clouds[] cloudsObjects;
 int totalClouds = 5;
+Princess p1;
 
 
 void setup() {
@@ -25,6 +26,10 @@ void setup() {
   //tower1 = (imgName, towerImgX, towerImgY)
   tower1 = new Tower("tower_pic.jpeg", (width/2) - 50, height-(height/3));
   ground = new Background("Ground.png", width/2, height*1.23);
+  
+  p1 = new Princess(5, 550);
+  
+  
 }
 
 void draw() {
@@ -37,6 +42,7 @@ void draw() {
     cloudsObjects[i].display();
   }
   frog.update();
+  p1.update();
 }
 
 void display() {
