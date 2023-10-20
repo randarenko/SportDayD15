@@ -16,6 +16,6 @@ class Clouds {
   }
 
   void display() {
-    image(image, x, y);
+    image(image, x-100, y);
   }
 }

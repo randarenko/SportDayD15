@@ -12,6 +12,8 @@ Clouds[] cloudsObjects;
 int totalClouds = 5;
 
 
+
+
 void setup() {
   size(800, 600);
   frog = new Frog(5, 550);
