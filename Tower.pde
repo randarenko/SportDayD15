@@ -1,7 +1,7 @@
 class Tower {
   //tower
   PImage towerImg; //importing tower image
-  int towerImgX; 
+  int towerImgX;
   float towerImgY; //location of tower image
   int sizeX, sizeY; //size of tower image
 
@@ -31,9 +31,7 @@ class Tower {
 
     //translate
     translateX = width/2;
-    //translateY = towerImgY - (coinSize*coinNumber);
-        translateY = height - sizeY;
-
+    translateY = height/2 - 140;
   }
 
   void display() {

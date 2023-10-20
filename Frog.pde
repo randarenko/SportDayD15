@@ -31,7 +31,7 @@ class Frog
   {
     translate(x, y);
     imageMode(CENTER);
-    image(frog, 0, 0);
+    image(frog, 0, -90);
   }
 
 //move the frog
