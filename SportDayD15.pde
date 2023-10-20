@@ -1,4 +1,5 @@
 Tower tower1;
+Background ground;
 Frog frog;
 PImage[] clouds;
 Clouds[] cloudsObjects;
@@ -25,6 +26,7 @@ void setup() {
 
   //tower1 = (imgName, towerImgX, towerImgY)
   tower1 = new Tower("tower_pic.jpeg", (width/2) - 50, height-(height/3));
+  ground = new Background("Ground.png", width/2, height/2);
 }
 
 void draw() {
