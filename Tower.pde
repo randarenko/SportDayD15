@@ -33,9 +33,10 @@ class Tower {
     //coins
     ellipseMode(CORNER);
     fill(coinC);
-    for (int x = towerImgX; x < towerImgX + sizeX; x = x + coinSize) {
-
+    for (int x = coinX; x < coinX + sizeX; x = x + coinSize) {
+for(int y = coinY; y < coinY + sizeY; y = y - coinSize) {
       ellipse(x, coinY - coinSize, coinSize, coinSize);
+}
     }
   }
 }
