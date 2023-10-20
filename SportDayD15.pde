@@ -1,3 +1,9 @@
+/* Attribution to BA93 on Pixabay for the Princess png, modified under Pixabay Content License.
+Attribution to Kenney.nl for cloud (Background Elements Redux), ground (Voxel Pack), tower (Platformer Pack Medieval), and frog (Platformer Art Extended Enemies) image assets under CC BY 4.0 DEED. 
+https://creativecommons.org/licenses/by/4.0/#
+Frog modified by flipping pixels*/
+
+
 Tower tower1;
 Frog frog;
 PImage[] clouds;
